@@ -1,6 +1,8 @@
-rsync -a = rsync -rlptgoD 
-rsync -av = rsync -rlptgoDv 
-rsync -av --checksum = rsync -rlptgoDvc 
+`rsync -a = rsync -rlptgoD`
+
+`rsync -av = rsync -rlptgoDv`
+
+`rsync -av --checksum = rsync -rlptgoDvc`
 
 [vagrant@localhost ~]$ ansible -i hosts localhost -m shell -a "rsync -rlpgoDvc --bwlimit=8192 --links --delete -n hexo _base/ ~/dest/"
 
